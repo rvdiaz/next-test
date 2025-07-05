@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-sansSerif: "DM Serif Text", sans-serif;
+  --color-textcolor: #1b3552;
+  --color-primary: #0f7cea;
+  --color-surfaceColor: #f3f9fe;
+  --color-subTextColor: #495e76;
+  --color-neutralGray: #79899c;
+  --color-borderColor: #e1e4e8;
+  --color-redColor: #ff5a5f;
+  --color-borderNeutralColor: #adb7c2;
+  --color-successColor: #00c951;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.ratingStar .filled-icons,
+.ratingStar .empty-icons {
+  display: flex;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+svg.star-svg {
+  display: inline;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
+}
+
+.myreviews .swiper-pagination-bullet-active {
+  background-color: #6e11b0;
 }
